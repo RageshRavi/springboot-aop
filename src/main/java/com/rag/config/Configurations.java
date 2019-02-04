@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 @Aspect
 @Configuration
 public class Configurations {
-    @Before(value = "execution(* com.rag.repo.*.*(..))")
+    @Before(value = "execution(* com.rag.controller.*.*(..))")
     public void before(JoinPoint joinPoint) {
         System.out.println(String.format("Execution for %s", joinPoint));
         Object[] args = joinPoint.getArgs();
