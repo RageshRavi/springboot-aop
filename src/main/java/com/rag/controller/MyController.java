@@ -22,8 +22,9 @@ public class MyController {
     }
 
     @PostMapping(value = "/setPerson", consumes = "application/json")
-    public void setPerson(@RequestBody Person person){
-//        System.out.println(person.toString());
+    public String setPerson(@RequestBody Person person) throws Exception {
+//        throw new Exception();
+       return "Person details inserted";
     }
 
 }
